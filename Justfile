@@ -4,6 +4,9 @@ set windows-shell := ["pwsh", "-NoLogo", "-NoProfileLoadTime", "-Command"]
 build:
     cargo build
 
+release:
+    cargo build --release
+
 # Run the project
 run:
     cargo run
