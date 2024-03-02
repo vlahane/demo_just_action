@@ -1,5 +1,3 @@
-// Annotated Basic Rust Example: File I/O and Stdout
-
 use std::fs::File;
 use std::io::{self, BufRead, BufReader, Write};
 
