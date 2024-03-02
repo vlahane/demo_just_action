@@ -9,9 +9,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-            - name: Set up Rust
-              uses: actions/setup-rust@v1
+            - run: sudo snap install --edge --classic just
+            - name: Setup | Rust
+              uses: ATiltedTree/setup-rust@v1
               with:
-                  rust-version: 1.51.0
-            - name: Run build
-              run: cargo build --release
+                  rust-version: 1.26.0
+            - name: Release build
+              run: just release
